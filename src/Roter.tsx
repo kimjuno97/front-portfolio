@@ -6,7 +6,7 @@ import Profile from './pages/Profile/Profile';
 export default function Roter() {
 	const [accordionToggle, setAccordionToggle] = useState(false);
 	return (
-		<BrowserRouter>
+		<BrowserRouter basename='/front-portfolio'>
 			<Header
 				accordionToggle={accordionToggle}
 				setAccordionToggle={setAccordionToggle}
