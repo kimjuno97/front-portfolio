@@ -8,7 +8,7 @@ import ScrollView from 'react-catbow-scrollview';
 export default function Appeal() {
 	const option = {
 		videoImageCount: 754, // 이미지 개수
-		imgUrl: './images/', // 이미지 경로
+		imgUrl: `${process.env.PUBLIC_URL}/images/`, // 이미지 경로
 		startNum: 10000, // 이미지 시작 넘버
 		extension: '.JPG', // 이미지 확장자
 		scrollAreaY: '500px', // 스크롤 공간 확보
