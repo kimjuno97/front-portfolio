@@ -7,11 +7,17 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
     html {
-    font-size: 62.5%; /* 1rem 을 10px로 변환한 코드*/
+    font-size: 100%; /* 1rem 을 10px로 변환한 코드*/
+    transition:0.5s;
+	scroll-behavior: smooth;
     }
-    body {
-        background-color: black;
-        color: white;
+    @media(max-width: 800px) {
+        html{
+            font-size: 62.5%;
+        }   
+    }
+    body > div {
+        width:100vw;
         overflow-x: hidden;
     }
     a {
