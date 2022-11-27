@@ -19,6 +19,7 @@ export default function useContact() {
 		if (window.confirm('송신하겠습니다?')) {
 			postMail(inputValues);
 		}
+		setInputValues(prev => ({ name: '', message: '' }));
 	};
 	return { inputValues, inputValuesHandler, postMessage };
 }

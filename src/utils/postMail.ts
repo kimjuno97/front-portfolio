@@ -13,9 +13,11 @@ const postMail = (data: Record<string, unknown> | undefined) => {
 	emailjs.send(serviceId, TemplateId, data).then(
 		response => {
 			console.log('SuCCESS!', response.status, response.text);
+			alert('SuCCESS Contact');
 		},
 		error => {
 			console.log('FAILED...', error);
+			alert('FAILED Contact!!');
 		}
 	);
 };
