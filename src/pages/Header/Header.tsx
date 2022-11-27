@@ -33,6 +33,7 @@ export default function Header({
 }
 
 const CONTENTS = [
+	{ text: 'Profile', url: '#profile' },
 	{ text: 'About me', url: '#about' },
 	{ text: 'Skills', url: '#skills' },
 	{ text: 'Appeal', url: '#appeal' },

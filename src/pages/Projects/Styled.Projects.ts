@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const ProjectsContainer = styled.div`
-	padding: 12rem 6rem;
+	padding: 8rem 6rem;
 	background: #f5bbda;
 `;
 

@@ -5,6 +5,7 @@ import S from './Styled.Projects';
 import { AiFillSwitcher } from 'react-icons/ai';
 import TodoList from './oneProject/TodoList';
 import FiveMillion from './oneProject/FiveMillion';
+import Ussop from './oneProject/Ussop';
 
 export default function Projects() {
 	return (
@@ -16,6 +17,7 @@ export default function Projects() {
 			<S.ProjectBoxFlexPos>
 				<TodoList />
 				<FiveMillion />
+				<Ussop />
 			</S.ProjectBoxFlexPos>
 		</S.ProjectsContainer>
 	);

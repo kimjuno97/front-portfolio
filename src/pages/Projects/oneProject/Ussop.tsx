@@ -2,17 +2,17 @@ import React from 'react';
 
 import S from '../Styled.Projects';
 
-export default function FiveMillion() {
+export default function Ussop() {
 	return (
 		<a
-			href='https://github.com/kimjuno97/36-2nd-5MILLION-frontend'
+			href='https://github.com/kimjuno97/36-1st-Usopp-frontend'
 			target='_blank'
 			rel='noreferrer'>
 			<S.ProjectBox>
-				<S.ProjectName>FiveMillion</S.ProjectName>
+				<S.ProjectName>Todolist</S.ProjectName>
 				<S.ProjectImg
-					src={`${process.env.PUBLIC_URL}/img/fivemillion.gif`}
-					alt='fivemillion'
+					src={`${process.env.PUBLIC_URL}/img/ussop.gif`}
+					alt='todolist'
 				/>
 				{/* <S.Discription defaultValue={``} /> */}
 			</S.ProjectBox>

@@ -7,6 +7,7 @@ import AboutMe from '../AboutMe/AboutMe';
 import Skills from '../Skills/Skills';
 import Appeal from '../Appeal/Appeal';
 import Projects from '../Projects/Projects';
+import Contact from '../Contact/Contact';
 
 interface TypeProfile {
 	accordionToggle: boolean;
@@ -17,7 +18,7 @@ export default function Profile({ accordionToggle }: TypeProfile) {
 
 	return (
 		<>
-			<S.Container>
+			<S.Container id='profile'>
 				<S.ProfileContainer>
 					<S.ProfileTextArea>
 						<S.ProfileText accordionToggle={accordionToggle}>
@@ -37,6 +38,7 @@ export default function Profile({ accordionToggle }: TypeProfile) {
 			<Skills />
 			<Appeal />
 			<Projects />
+			<Contact />
 		</>
 	);
 }
