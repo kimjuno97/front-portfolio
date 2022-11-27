@@ -27,7 +27,10 @@ export default function Profile({ accordionToggle }: TypeProfile) {
 							{text.bot}
 						</S.ProfileText>
 					</S.ProfileTextArea>
-					<S.Profile src='./img/profile.jpg' alt='profile' />
+					<S.Profile
+						src={`${process.env.PUBLIC_URL}/img/profile.jpg`}
+						alt='profile'
+					/>
 				</S.ProfileContainer>
 			</S.Container>
 			<AboutMe />

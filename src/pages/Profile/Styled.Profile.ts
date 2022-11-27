@@ -9,6 +9,10 @@ const Container = styled.div`
 const ProfileContainer = styled.div`
 	display: flex;
 	justify-content: space-around;
+	@media (max-width: 700px) {
+		flex-direction: column-reverse;
+		gap: 3rem;
+	}
 `;
 
 const ProfileTextArea = styled.div`
@@ -36,6 +40,10 @@ const Profile = styled.img`
 	height: 25rem;
 	border-radius: 9999px;
 	z-index: 1;
+	@media (max-width: 700px) {
+		margin-left: 50%;
+		transform: translate(-50%, 0);
+	}
 `;
 
 const S = {
