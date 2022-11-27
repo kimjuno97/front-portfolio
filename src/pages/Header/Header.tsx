@@ -38,4 +38,5 @@ const CONTENTS = [
 	{ text: 'Skills', url: '#skills' },
 	{ text: 'Appeal', url: '#appeal' },
 	{ text: 'Projects', url: '#projects' },
+	{ text: 'Contact', url: '#contact' },
 ];

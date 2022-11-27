@@ -8,7 +8,7 @@ import useContact from './useContact';
 export default function Contact() {
 	const { inputValues, inputValuesHandler, postMessage } = useContact();
 	return (
-		<S.FormContainer>
+		<S.FormContainer id='contact'>
 			<S.FormHeaderArea>
 				<SiMinutemailer size='5rem' />
 				<S.FormTitle>Contact</S.FormTitle>

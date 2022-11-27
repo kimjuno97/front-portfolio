@@ -33,7 +33,7 @@ const AccordionIcon = styled.div`
 `;
 
 const Accordion = styled.div<TypeAccordionIcon>`
-	height: ${({ accordionToggle }) => (accordionToggle ? '20rem' : '0rem')};
+	height: ${({ accordionToggle }) => (accordionToggle ? '25rem' : '0rem')};
 	overflow: hidden;
 	margin-top: -10px;
 	padding: 0rem 3rem;
