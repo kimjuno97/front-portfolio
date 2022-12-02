@@ -40,7 +40,7 @@ const Accordion = styled.div<TypeAccordionIcon>`
 	transition: 1s;
 `;
 
-const colorAni = keyframes`
+export const colorAni = keyframes`
   0% {
     color:white;
   }

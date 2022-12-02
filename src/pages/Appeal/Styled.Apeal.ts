@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const AppealContainer = styled.div`
 	padding: 8rem 6rem;
@@ -8,7 +8,7 @@ const AppealContainer = styled.div`
 const AppealTitleArea = styled.div`
 	display: flex;
 	gap: 2rem;
-	margin-bottom: 3rem;
+	margin-bottom: 4rem;
 `;
 
 const AppealTitle = styled.h1`
@@ -20,7 +20,7 @@ const AppealBoxFlexPos = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	align-items: flex-start;
-	gap: 2rem;
+	gap: 3rem;
 	min-width: 15rem;
 	transition: 1s;
 `;
@@ -38,8 +38,11 @@ const AppealBox = styled.div`
 	border-radius: 1rem;
 	background: white;
 	padding: 8rem 3rem 3rem 3rem;
-	transition: 1s;
+	transition: 0.5s;
 	box-shadow: 1rem 1rem 1rem 0;
+	:hover {
+		transform: translateY(-6%);
+	}
 `;
 
 const AppealName = styled.div`
@@ -50,13 +53,35 @@ const AppealName = styled.div`
 	font-weight: bold;
 `;
 
-const ScrollBox = styled.div`
-	height: 300px;
-	overflow: auto;
-`;
-
 const ScrollContents = styled.p`
 	font-size: 1.3rem;
+`;
+
+const ScrollViewDiv = styled.div`
+	background-image: url('${process.env.PUBLIC_URL}/img/scrollview.gif');
+	background-size: cover;
+	width: 22.125rem;
+	height: 26rem;
+`;
+
+const DocsTag = styled.a`
+	font-weight: bold;
+	padding: 0 4px 2px 4px;
+	border-bottom: 1px solid black;
+`;
+
+const linkAni = keyframes`
+  0% {
+    color:blue;
+  }
+  100% {
+    color: red;
+  }
+`;
+
+const NpmTag = styled.a`
+	font-weight: bold;
+	animation: ${linkAni} 3s infinite alternate;
 `;
 
 const S = {
@@ -66,8 +91,10 @@ const S = {
 	AppealBoxFlexPos,
 	AppealBox,
 	AppealName,
-	ScrollBox,
 	ScrollContents,
+	ScrollViewDiv,
+	DocsTag,
+	NpmTag,
 };
 
 export default S;
