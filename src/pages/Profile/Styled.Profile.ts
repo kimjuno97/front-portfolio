@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Container = styled.div`
 	margin-top: 8rem;
 	padding: 6rem 0;
-	background: #2c4ec9;
+	background: #2750e5c9;
 `;
 const ProfileContainer = styled.div`
 	display: flex;

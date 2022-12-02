@@ -13,10 +13,10 @@ export default function TodoList() {
 					src={`${process.env.PUBLIC_URL}/img/todolist.gif`}
 					alt='todolist'
 				/>
-				<S.Discription
+				{/* <S.Discription
 					defaultValue={`로그인: jwt토큰 인증, 인가\n(localstorage)
                 todolst: CRUD 구현`}
-				/>
+				/> */}
 			</S.ProjectBox>
 		</a>
 	);

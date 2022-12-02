@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const SkillsContainer = styled.div`
 	padding: 8rem 6rem;
-	background: #f9c51d;
+	background: #ffd447e6;
 `;
 
 const SkillsTitleArea = styled.div`
@@ -20,7 +20,7 @@ const SkillsBoxFlexPos = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	align-items: flex-start;
-	gap: 2rem;
+	gap: 3rem;
 	min-width: 15rem;
 	transition: 1s;
 `;
@@ -36,8 +36,11 @@ const SkillsBox = styled.div`
 	border-radius: 1rem;
 	background: white;
 	padding: 8rem 3rem 3rem 3rem;
-	transition: 1s;
+	transition: 0.5s;
 	box-shadow: 1rem 1rem 1rem 0;
+	:hover {
+		transform: translateY(-6%);
+	}
 `;
 
 const SkillName = styled.div`

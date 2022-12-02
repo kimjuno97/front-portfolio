@@ -8,7 +8,7 @@ const ProjectsContainer = styled.div`
 const ProjectsTitleArea = styled.div`
 	display: flex;
 	gap: 2rem;
-	margin-bottom: 3rem;
+	margin-bottom: 4rem;
 `;
 
 const ProjectsTitle = styled.h1`
@@ -20,7 +20,7 @@ const ProjectBoxFlexPos = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	align-items: flex-start;
-	gap: 2rem;
+	gap: 4rem;
 	min-width: 15rem;
 	transition: 1s;
 `;
@@ -38,9 +38,12 @@ const ProjectBox = styled.div`
 	border-radius: 1rem;
 	background: white;
 	padding: 8rem 3rem 3rem 3rem;
-	transition: 1s;
+	transition: 0.5s;
 	box-shadow: 1rem 1rem 1rem 0;
 	cursor: pointer;
+	:hover {
+		transform: translateY(-6%);
+	}
 `;
 
 const ProjectName = styled.div`
