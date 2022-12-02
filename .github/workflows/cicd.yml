@@ -1,4 +1,4 @@
-name: Catbow Publish
+name: Portfolio Publish
 
 on:
   push:
@@ -22,10 +22,10 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Build Docs
+      - name: Build Portfolio
         run: npm run build
 
-      - name: publish Docs
+      - name: publish Portfolio
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.JUNU }}
