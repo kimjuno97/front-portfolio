@@ -17,6 +17,17 @@ jobs:
         with:
           node-version: 16.x
 
+      - name: Setting environment variables
+        run: |
+          echo "REACT_APP_PUBLICK_KEY=$REACT_APP_PUBLICK_KEY" >> .env.production
+          echo "REACT_APP_SERVICE_ID=$REACT_APP_SERVICE_ID" >> .env.production
+          echo "REACT_APP_TEMPLATE_ID=$REACT_APP_TEMPLATE_ID" >> .env.production
+
+        env:
+          REACT_APP_PUBLICK_KEY: ${{secrets.REACT_APP_PUBLICK_KEY}}
+          REACT_APP_BUCKET_NAME: ${{secrets.REACT_APP_SERVICE_ID}}
+          REACT_APP_TEMPLATE_ID: ${{secrets.REACT_APP_TEMPLATE_ID}}
+
       - name: Install Dependencies
         run: npm install
 
