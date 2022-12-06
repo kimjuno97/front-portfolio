@@ -27,7 +27,8 @@ const AboutMeTitle = styled.h1<TypeParallax>`
 	font-weight: bold;
 	transition: 0.5s;
 	opacity: ${({ parallax }) => parallax / 100};
-	transform: ${({ parallax }) => `translateX(-${100 - parallax}%)`};
+	transform: ${({ parallax }) =>
+		parallax <= 85 ? `translateX(-${150 - parallax}%)` : `translateX(0%)`};
 `;
 
 const AboutContents = styled.div`

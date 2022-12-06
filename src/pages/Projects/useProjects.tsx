@@ -9,7 +9,7 @@ export default function useProjects() {
 	useEffect(() => {
 		const options: IntersectionObserverInit = {
 			root: null,
-			rootMargin: '50px 0px 0px 0px',
+			rootMargin: '1500px 0px 0px 0px',
 			threshold: percentageArray(),
 		};
 
@@ -24,7 +24,5 @@ export default function useProjects() {
 		if (observerRef.current) observer.observe(observerRef.current);
 	}, []);
 
-	const showBox = parallax === 100;
-
-	return { parallax, showBox, observerRef };
+	return { parallax, observerRef };
 }

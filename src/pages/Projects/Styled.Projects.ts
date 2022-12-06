@@ -20,19 +20,16 @@ const ProjectsTitle = styled.h1`
 	font-weight: bold;
 `;
 
-const ProjectBoxFlexPos = styled.div<TypeShowBox>`
+const ProjectBoxFlexPos = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	align-items: flex-start;
 	gap: 4rem;
 	min-width: 15rem;
 	transition: 2s;
-	opacity: ${({ showBox }) => (showBox ? 1 : 0)};
-	transform: ${({ showBox }) =>
-		showBox ? 'translateY(0)' : 'translateY(-50%)'};
 `;
 
-const ProjectBox = styled.div`
+const ProjectBox = styled.div<TypeShowBox>`
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -51,6 +48,9 @@ const ProjectBox = styled.div`
 	:hover {
 		transform: translateY(-6%);
 	}
+	opacity: ${({ showBox }) => (showBox ? 1 : 0)};
+	transform: ${({ showBox }) =>
+		showBox ? 'translateY(0)' : 'translateY(-50%)'};
 `;
 
 const ProjectName = styled.div`

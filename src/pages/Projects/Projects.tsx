@@ -11,18 +11,18 @@ import Ussop from './oneProject/Ussop';
 import useProjects from './useProjects';
 
 export default function Projects() {
-	const { parallax, showBox, observerRef } = useProjects();
+	const { parallax, observerRef } = useProjects();
 
 	return (
-		<S.ProjectsContainer id='projects'>
-			<S.ProjectsTitleArea ref={observerRef} parallax={parallax}>
+		<S.ProjectsContainer id='projects' ref={observerRef}>
+			<S.ProjectsTitleArea parallax={parallax}>
 				<AiFillSwitcher size='5rem' />
 				<S.ProjectsTitle>Projects</S.ProjectsTitle>
 			</S.ProjectsTitleArea>
-			<S.ProjectBoxFlexPos showBox={showBox}>
-				<TodoList />
-				<FiveMillion />
-				<Ussop />
+			<S.ProjectBoxFlexPos>
+				<TodoList showBox={parallax > 33} />
+				<FiveMillion showBox={parallax > 66} />
+				<Ussop showBox={parallax > 99} />
 			</S.ProjectBoxFlexPos>
 		</S.ProjectsContainer>
 	);
