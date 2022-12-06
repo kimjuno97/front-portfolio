@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import postMail from '../../utils/postMail';
+import postMail from '../../utills/postMail';
 
 export default function useContact() {
 	const [inputValues, setInputValues] = useState({
