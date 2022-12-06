@@ -1,36 +1,15 @@
-import React, { useEffect, useRef, useState } from 'react';
-
 import S from './Styled.AboutMe';
 
 import { BsGithub } from 'react-icons/bs';
 import { MdEmail } from 'react-icons/md';
 import { IoMdCall } from 'react-icons/io';
 import { FaBloggerB } from 'react-icons/fa';
-import percentageArray from '../../utills/percentageArray';
+
+import useAboutMe from './useAboutMe';
 
 export default function AboutMe() {
-	const observerRef = useRef<HTMLDivElement | null>(null);
+	const { parallax, observerRef } = useAboutMe();
 
-	const [parallax, setParallax] = useState(0);
-
-	console.log(parallax);
-	useEffect(() => {
-		const options: IntersectionObserverInit = {
-			root: null,
-			rootMargin: '50px 0px 0px 0px',
-			threshold: percentageArray(),
-		};
-
-		const observer = new IntersectionObserver(entries => {
-			entries.forEach(entry => {
-				if (entry.isIntersecting) {
-					setParallax(Math.round(entry.intersectionRatio * 100));
-				}
-			});
-		}, options);
-
-		if (observerRef.current) observer.observe(observerRef.current);
-	}, []);
 	return (
 		<S.AboutMeContainer id='about' ref={observerRef}>
 			<S.AboutMeTitle parallax={parallax}>☎︎ ABOUT ME</S.AboutMeTitle>

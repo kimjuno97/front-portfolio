@@ -1,14 +1,18 @@
 import styled from 'styled-components';
 
+import { TypeShowBox, TypeParallax } from '../../types';
+
 const SkillsContainer = styled.div`
 	padding: 8rem 6rem;
 	background: #ffd447e6;
 `;
 
-const SkillsTitleArea = styled.div`
+const SkillsTitleArea = styled.div<TypeParallax>`
 	display: flex;
 	gap: 2rem;
 	margin-bottom: 3rem;
+	transition: 2s;
+	opacity: ${({ parallax }) => parallax / 100};
 `;
 
 const SkiillsTitle = styled.h1`
@@ -16,13 +20,16 @@ const SkiillsTitle = styled.h1`
 	font-weight: bold;
 `;
 
-const SkillsBoxFlexPos = styled.div`
+const SkillsBoxFlexPos = styled.div<TypeShowBox>`
 	display: flex;
 	flex-wrap: wrap;
 	align-items: flex-start;
 	gap: 3rem;
 	min-width: 15rem;
-	transition: 1s;
+	transition: 2s;
+	opacity: ${({ showBox }) => (showBox ? 1 : 0)};
+	transform: ${({ showBox }) =>
+		showBox ? 'translateY(0)' : 'translateY(-50%)'};
 `;
 
 const SkillsBox = styled.div`
