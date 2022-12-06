@@ -1,14 +1,17 @@
 import styled from 'styled-components';
 
+import { TypeParallax } from '../../types';
+
 const FormContainer = styled.div`
-	padding: 8rem 6rem;
+	padding: 6rem 6rem;
 	background: #80ec84;
 `;
 
-const FormHeaderArea = styled.div`
+const FormHeaderArea = styled.div<TypeParallax>`
 	display: flex;
 	gap: 2rem;
-	margin-bottom: 3rem;
+	margin-bottom: 2rem;
+	opacity: ${({ parallax }) => parallax / 100};
 `;
 
 const FormTitle = styled.div`

@@ -1,5 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 
+import { TypeAccordionIcon } from '../../types';
+
 const Container = styled.header`
 	position: fixed;
 	top: 0;
@@ -69,7 +71,3 @@ const S = {
 };
 
 export default S;
-
-interface TypeAccordionIcon {
-	accordionToggle: boolean;
-}

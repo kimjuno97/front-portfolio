@@ -8,14 +8,18 @@ import { DiCss3, DiJavascript } from 'react-icons/di';
 import { SiTypescript, SiStyledcomponents } from 'react-icons/si';
 import { FaSass, FaReact, FaJira, FaFigma } from 'react-icons/fa';
 
+import useSkills from './useSkills';
+
 export default function Skills() {
+	const { parallax, showBox, observerRef } = useSkills();
+
 	return (
 		<S.SkillsContainer id='skills'>
-			<S.SkillsTitleArea>
+			<S.SkillsTitleArea ref={observerRef} parallax={parallax}>
 				<BsStack size='4rem' />
 				<S.SkiillsTitle>Skills</S.SkiillsTitle>
 			</S.SkillsTitleArea>
-			<S.SkillsBoxFlexPos>
+			<S.SkillsBoxFlexPos showBox={showBox}>
 				<S.SkillsBox>
 					<S.SkillName>Frontend</S.SkillName>
 					<AiFillHtml5 size='7rem' fill='red' />

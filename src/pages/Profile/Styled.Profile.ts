@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { TypeAccordionIcon } from '../../types';
+
 const Container = styled.div`
 	margin-top: 8rem;
 	padding: 6rem 0;
@@ -23,7 +25,7 @@ const ProfileTextArea = styled.div`
 	gap: 1rem;
 `;
 
-const ProfileText = styled.div<TypeProfileText>`
+const ProfileText = styled.div<TypeAccordionIcon>`
 	width: auto;
 	min-height: 2rem;
 	color: white;
@@ -54,7 +56,3 @@ const S = {
 };
 
 export default S;
-
-interface TypeProfileText {
-	accordionToggle: boolean;
-}

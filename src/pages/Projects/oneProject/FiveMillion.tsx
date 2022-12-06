@@ -14,7 +14,6 @@ export default function FiveMillion() {
 					src={`${process.env.PUBLIC_URL}/img/fivemillion.gif`}
 					alt='fivemillion'
 				/>
-				{/* <S.Discription defaultValue={``} /> */}
 			</S.ProjectBox>
 		</a>
 	);

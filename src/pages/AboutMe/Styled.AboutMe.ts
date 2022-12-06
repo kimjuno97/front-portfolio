@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { TypeParallax, TypeGrid } from '../../types';
+
 const AboutMeContainer = styled.div`
 	display: grid;
 	grid-template-areas:
@@ -23,6 +25,7 @@ const AboutMeTitle = styled.h1<TypeParallax>`
 	grid-area: header;
 	font-size: 5rem;
 	font-weight: bold;
+	transition: 0.5s;
 	opacity: ${({ parallax }) => parallax / 100};
 	transform: ${({ parallax }) => `translateX(-${100 - parallax}%)`};
 `;
@@ -45,11 +48,3 @@ const AbuotText = styled.a<TypeGrid>`
 const S = { AboutMeContainer, AboutMeTitle, AboutContents, AbuotText };
 
 export default S;
-
-interface TypeParallax {
-	parallax: number;
-}
-
-interface TypeGrid extends TypeParallax {
-	gridArea: 'vText' | 'pText' | 'eText' | 'gText';
-}
