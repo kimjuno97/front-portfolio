@@ -35,7 +35,7 @@ const GRID_AREA: { [key: number]: string } = {
 	8: 'rightBot',
 };
 
-const PuzzleBox = styled.div<{ gridArea: number; scale: boolean }>`
+const PuzzleBox = styled.div<{ gridArea: number; hoverScale: boolean }>`
 	grid-area: ${({ gridArea }) => GRID_AREA[gridArea]};
 	width: 200px;
 	height: 200px;
@@ -44,7 +44,7 @@ const PuzzleBox = styled.div<{ gridArea: number; scale: boolean }>`
 	cursor: pointer;
 	transition: 0.4s;
 	:hover {
-		transform: ${({ scale }) => scale && 'scale(120%)'};
+		transform: ${({ hoverScale }) => hoverScale && 'scale(120%)'};
 	}
 `;
 

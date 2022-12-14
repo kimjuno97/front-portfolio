@@ -11,7 +11,7 @@ export default function Puzzle() {
 					<S.PuzzleBox
 						key={idx}
 						gridArea={idx}
-						scale={scale}
+						hoverScale={scale}
 						onDragStart={() => dragStart(idx)}
 						onDragEnter={() => dragEnter(idx)}
 						onDragOver={e => e.preventDefault()}
