@@ -31,7 +31,9 @@ jobs:
         run: npm install
 
       - name: Build Portfolio
-        run: npm run build
+        run: |
+          npm run build
+          cp build/index.html build/404.html
 
       - name: publish Portfolio
         uses: peaceiris/actions-gh-pages@v3
