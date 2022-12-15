@@ -41,9 +41,8 @@ export default function usePuzzle() {
 	useEffect(() => {
 		let pass = '';
 		puzzle.forEach(({ num }) => (pass += num));
-		console.log(pass);
 		if (pass === '698542173') {
-			// navigate('/main');
+			navigate('/main');
 		}
 	}, [navigate, puzzle]);
 
