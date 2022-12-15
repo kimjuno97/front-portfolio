@@ -9,17 +9,7 @@ export default function usePuzzle() {
 
 	const [scale, setScale] = useState(true);
 
-	const [puzzle, setPuzzle] = useState([
-		{ num: 3, url: '/img/cat/001.jpeg' },
-		{ num: 7, url: '/img/cat/002.jpeg' },
-		{ num: 1, url: '/img/cat/003.jpeg' },
-		{ num: 2, url: '/img/cat/004.jpeg' },
-		{ num: 5, url: '/img/cat/006.jpeg' },
-		{ num: 4, url: '/img/cat/005.jpeg' },
-		{ num: 8, url: '/img/cat/007.jpeg' },
-		{ num: 9, url: '/img/cat/008.jpeg' },
-		{ num: 6, url: '/img/cat/009.jpeg' },
-	]);
+	const [puzzle, setPuzzle] = useState(() => shuffleArray(URL));
 
 	const dragStart = (idx: number) => {
 		dragItem.current = idx;
@@ -51,10 +41,26 @@ export default function usePuzzle() {
 	useEffect(() => {
 		let pass = '';
 		puzzle.forEach(({ num }) => (pass += num));
-		if (pass === '691542873' || pass === '698542173') {
+		if (pass === '698542173') {
 			navigate('/main');
 		}
 	}, [navigate, puzzle]);
 
 	return { puzzle, dragStart, dragEnter, drop, scale };
+}
+
+const URL = [
+	{ num: 3, url: '/img/cat/001.jpeg' },
+	{ num: 7, url: '/img/cat/002.jpeg' },
+	{ num: 1, url: '/img/cat/003.jpeg' },
+	{ num: 2, url: '/img/cat/004.jpeg' },
+	{ num: 5, url: '/img/cat/006.jpeg' },
+	{ num: 4, url: '/img/cat/005.jpeg' },
+	{ num: 8, url: '/img/cat/007.jpeg' },
+	{ num: 9, url: '/img/cat/008.jpeg' },
+	{ num: 6, url: '/img/cat/009.jpeg' },
+];
+
+function shuffleArray(array: { num: number; url: string }[]) {
+	return array.sort(() => Math.random() - 0.5);
 }

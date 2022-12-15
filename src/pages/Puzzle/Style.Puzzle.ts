@@ -8,6 +8,7 @@ const Container = styled.section`
 	width: 100vw;
 	height: 100vh;
 	background: linear-gradient(20deg, rgb(33, 33, 33), rgb(66, 66, 66));
+	// TODO: 라우팅 전 애니메이션 넣어보기
 	transition: 1s;
 `;
 
@@ -21,6 +22,8 @@ const Position = styled.div`
 		'leftBot midBot rightBot';
 	margin: 150px auto;
 	z-index: 3;
+	transition: 1s;
+	transform: scale(1);
 `;
 
 const GRID_AREA: { [key: number]: string } = {
